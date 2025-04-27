@@ -17,6 +17,7 @@ app.post('/set-cookies', (req, res) => {
   const { name, age } = req.body;
   res.cookie('name', name, { maxAge: 24 * 60 * 60 * 1000 });
   res.cookie('age', age, { maxAge: 24 * 60 * 60 * 1000 });
+  res.redirect('/display');
 });
 
 // Route to display cookies
